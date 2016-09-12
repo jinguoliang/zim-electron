@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . dist/MyApp --ignore=node_modules/electron-* && echo cp icon to app/icon  ",
+    "build": "electron-packager . MyApp --ignore=node_modules/electron-* && echo cp icon to app/icon  ",
     "test": "mocha test"
   },
   "author": "Jinux",
