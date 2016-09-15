@@ -1,6 +1,11 @@
-var { app,
-      BrowserWindow,
-      } = require('electron')
+/**
+  创建一个window, 并加载index.html
+*/
+var {
+  app,
+  BrowserWindow,
+} = require('electron')
+
 const ipc = require('electron').ipcMain
 
 app.on('ready', function() {

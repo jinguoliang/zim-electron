@@ -1,6 +1,4 @@
 var assert = require('assert')
-// var assert = require
-var markdown = require('markdown').markdown
 
 var fs = require('fs');
 var front = require('hexo-front-matter');

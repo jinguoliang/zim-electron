@@ -1,3 +1,4 @@
+// 菜单
 var {remote,ipcRenderer} = require('electron')
 var {Menu, MenuItem, } = remote;
 
