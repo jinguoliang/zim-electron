@@ -10,7 +10,7 @@ describe('markdown', function () {
   describe('load', function () {
     it('async load md with yaml', function (done) {
     	markdown.load(testMd, function(data) {
-        assert.equal(data.title, 'hello hello')
+        assert.equal(data.title, 'hello')
         done()
       })
     })
@@ -27,6 +27,14 @@ describe('markdown', function () {
         })
       })
     })
+    it('async save md with yaml no callback', function (done) {
+      var data = {
+        title: "lala",
+        _content: "##helloworld"
+      };
+      markdown.save(testSaveMd, data);
+      assert.ok(true)
+      done()
+    })
   })
-
 })

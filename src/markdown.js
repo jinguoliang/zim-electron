@@ -13,9 +13,12 @@ function loadFile(mdName, callback) {
 }
 
 function saveFile(mdName,data, callback) {
+  if (mdName == null || mdName == "") {
+    throw error("file path is wrong")
+  }
   var file = mdName + ".md";
   fs.writeFile(file, frontMatter.stringify(data), function (err, data) {
-    callback(err==null)
+    callback && callback(err==null)
   })
 }
 

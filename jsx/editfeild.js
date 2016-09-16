@@ -9,8 +9,10 @@ var EditFeild = React.createClass({
     }
   },
   onChange: function(event) {
+    var content = event.target.value
+    this.props.onChange(content)
     this.setState({
-      content: event.target.value
+      content: content
     })
   },
   render: function() {
