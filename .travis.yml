@@ -3,5 +3,5 @@ node_js:
  - "6.4.0"
 test: true
 script:
- - npm run build
+ - npm run babel
  - npm test
