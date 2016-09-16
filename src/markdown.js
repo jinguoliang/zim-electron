@@ -3,10 +3,8 @@ var frontMatter = require('hexo-front-matter');
 
 function loadFile(mdName, callback) {
   var file = mdName + ".md";
-  console.log(file)
   fs.readFile(file, "utf-8", function(err, data) {
     if (err) {
-      console.log(err)
       callback(null);  // 出错时返回空
     }
     var d = frontMatter.parse(data);
@@ -14,4 +12,12 @@ function loadFile(mdName, callback) {
   })
 }
 
+function saveFile(mdName,data, callback) {
+  var file = mdName + ".md";
+  fs.writeFile(file, frontMatter.stringify(data), function (err, data) {
+    callback(err==null)
+  })
+}
+
 module.exports.load = loadFile
+module.exports.save = saveFile
