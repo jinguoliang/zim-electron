@@ -2,4 +2,5 @@ node_modules
 MyApp-*
 dist
 gendsrc
+test/data/*.png
 

@@ -6,6 +6,7 @@
 .editfeild {
   width: 50%;
   height: 100%;
+  float:left;
 }
 .mdpreviewer {
   width: 50%;
