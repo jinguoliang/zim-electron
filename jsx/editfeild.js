@@ -5,7 +5,7 @@ var ReactDom = require('react-dom');
 var EditFeild = React.createClass({
   getInitialState: function() {
     return {
-      content:this.props.content
+      content:this.props.defaultValue
     }
   },
   onChange: function(event) {

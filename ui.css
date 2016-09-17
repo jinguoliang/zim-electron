@@ -1,7 +1,19 @@
-.editfeild {
+
+.mdeditor {
   width: 100%;
   height: 100%;
 }
+.editfeild {
+  width: 50%;
+  height: 100%;
+}
+.mdpreviewer {
+  width: 50%;
+  height: 100%;
+  background-color: #ff00ff;
+  float: right;
+}
+
 
 bady {
   background-color: #ff00ff;

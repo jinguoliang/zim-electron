@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDom = require('react-dom');
-var EditFeild = require('./editfeild.js')
+var MDEditor = require('./mdeditor.js')
 var markdown = require("../src/markdown.js")
 
 var currentMd = "test/data/test_has_front"
@@ -21,6 +21,6 @@ function onTextChanged(content) {
 markdown.load(currentMd, function(data) {
   document.title = data.title;
   var content = data._content;
-  var editfeild = <EditFeild content={content} onChange={onTextChanged}/>
-  ReactDom.render(editfeild, document.getElementById('container'))
+  var mdeditor = <MDEditor content={content} onChange={onTextChanged}/>
+  ReactDom.render(mdeditor, document.getElementById('container'))
 })
