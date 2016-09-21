@@ -7,6 +7,7 @@ var {
 } = require('electron')
 
 const ipc = require('electron').ipcMain
+const ipcsignal = require('./src/ipcsignal.js')
 
 app.on('ready', function() {
   var mainWindow = new BrowserWindow({
@@ -16,7 +17,7 @@ app.on('ready', function() {
   console.log(`file://${__dirname}/index.html`)
   mainWindow.loadURL(`file://${__dirname}/index.html`);
   mainWindow.openDevTools();
-  ipc.on('toggleVisible', function () {
-    mainWindow.hide()
+  ipc.on(ipcsignal.openfile, function (event, fileName) {
+    mainWindow.send(ipcsignal.openfile, fileName)
   })
 })

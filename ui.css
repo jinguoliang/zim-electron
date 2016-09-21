@@ -11,7 +11,7 @@
 .mdpreviewer {
   width: 50%;
   height: 100%;
-  background-color: #ff00ff;
+  overflow-y: scroll;
   float: right;
 }
 
